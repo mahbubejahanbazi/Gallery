@@ -23,11 +23,9 @@ public class MyCache {
     private static ImageLoader imageLoader;
 
     private static final DisplayImageOptions displayImageOptionsCacheImage = new DisplayImageOptions.Builder()
-            //            .bitmapConfig(Bitmap.Config.ALPHA_8)
             .cacheInMemory(true)
             .cacheOnDisk(true)
             .delayBeforeLoading(50)
-            //            .imageScaleType(ImageScaleType.EXACTLY)
             .showImageForEmptyUri(R.drawable.ic_default_picture)
             .showImageOnFail(R.drawable.ic_default_picture)
             .showImageOnLoading(R.drawable.ic_default_picture)
@@ -35,7 +33,6 @@ public class MyCache {
 
 
     private static final DisplayImageOptions displayImageOptionsCacheVideo = new DisplayImageOptions.Builder()
-            //            .bitmapConfig(Bitmap.Config.ALPHA_8)
             .cacheInMemory(true)
             .cacheOnDisk(true)
             .delayBeforeLoading(100)
