@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         GalleryUtils.activity = MainActivity.this;
         GalleryUtils.root = findViewById(R.id.activity_main_root);
-        MyPopupWindow.processTransient();
+        CustomPopupWindow.processTransient();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         if (hasPermission()) {
             ft.replace(R.id.your_placeholder, new GalleryFragment());
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (MyPopupWindow.popupBackProcessor()) {
+        if (CustomPopupWindow.popupBackProcessor()) {
             return;
         }
         super.onBackPressed();

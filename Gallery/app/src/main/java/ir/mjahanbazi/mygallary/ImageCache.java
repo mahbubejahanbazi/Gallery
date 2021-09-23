@@ -18,7 +18,7 @@ import java.io.File;
 
 import static ir.mjahanbazi.mygallary.GalleryUtils.activity;
 
-public class MyCache {
+public class ImageCache {
 
     private static ImageLoader imageLoader;
 

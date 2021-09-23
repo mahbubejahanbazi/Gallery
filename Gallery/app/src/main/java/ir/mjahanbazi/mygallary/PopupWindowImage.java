@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 
-public class PopupWindowImage extends MyPopupWindow {
+public class PopupWindowImage extends CustomPopupWindow {
     private ViewGroup menu;
     private WebView webView;
     private final Charset UTF8 = Charset.forName("UTF-8");

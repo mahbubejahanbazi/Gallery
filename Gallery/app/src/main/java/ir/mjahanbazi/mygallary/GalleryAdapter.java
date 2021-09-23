@@ -18,7 +18,7 @@ import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 
-public class GalleryAdapter extends MyListAdapter<String> {
+public class GalleryAdapter extends ListAdapter<String> {
     private static String[] extensions = {"jpg", "jpeg", "bmp", "png"};
     private final GalleryFragment gallery;
     private static String fileType;
@@ -81,7 +81,7 @@ public class GalleryAdapter extends MyListAdapter<String> {
             Iterator<String> iterator = gallery.filesPath.get(filePath).iterator();
             if (iterator.hasNext()) {
                 file = new File(iterator.next());
-                MyCache.image(file, tag.fileImage);//pictures
+                ImageCache.image(file, tag.fileImage);//pictures
                 tag.fileName.setVisibility(VISIBLE);
                 tag.fileName.setText(filePath);
                 tag.videoIcon.setVisibility(INVISIBLE);
@@ -93,11 +93,11 @@ public class GalleryAdapter extends MyListAdapter<String> {
             boolean extension = FilenameUtils.isExtension(file.getName().toLowerCase(), extensions);
             if (extension) {
                 fileType = GalleryUtils.FILE_TYPE_IMAGE;
-                MyCache.image(file, tag.fileImage);//pictures
+                ImageCache.image(file, tag.fileImage);//pictures
                 tag.videoIcon.setVisibility(INVISIBLE);
             } else if (FilenameUtils.isExtension(file.getName().toLowerCase(), new String[]{"mp4", "mkv","avi"})) {
                 fileType = GalleryUtils.FILE_TYPE_VIDEO;
-                MyCache.video(file, tag.fileImage);//video
+                ImageCache.video(file, tag.fileImage);//video
                 tag.videoIcon.setVisibility(VISIBLE);
             }
             tag.fileName.setVisibility(GONE);

@@ -8,15 +8,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public abstract class MyListAdapter<T> extends BaseAdapter {
+public abstract class ListAdapter<T> extends BaseAdapter {
 
     protected final List<T> list;
 
-    public MyListAdapter() {
+    public ListAdapter() {
         this(new ArrayList<T>());
     }
 
-    public MyListAdapter(List<T> list) {
+    public ListAdapter(List<T> list) {
         this.list = list;
     }
 

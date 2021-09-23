@@ -9,5 +9,4 @@ public class GalleryUtils {
     public static String FILE_TYPE_FOLDER = "folder";
     public static Activity activity;
     public static RelativeLayout root;
-    public static boolean showPopUp = false;
 }

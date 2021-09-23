@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ir.mjahanbazi.mygallary;
 
 import android.content.Context;
@@ -18,7 +13,7 @@ import android.widget.VideoView;
 import static ir.mjahanbazi.mygallary.GalleryUtils.activity;
 
 
-public class PopupWindowVideo extends MyPopupWindow  {
+public class PopupWindowVideo extends CustomPopupWindow {
 
     private ViewGroup menu;
     private VideoView videoView;
